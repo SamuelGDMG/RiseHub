@@ -49,6 +49,9 @@ flutter:
     - images/rocket.png
     - images/rocket3.png
     - images/rocket4.png
+    - images/beneficios-aws.jpg
+    - images/beneficios-trello.jpg
+    - images/beneficios-contaazul.jpg
 
 
   fonts:
