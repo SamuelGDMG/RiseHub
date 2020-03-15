@@ -30,7 +30,7 @@ class _BenefitsPage extends State<BenefitsPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     SizedBox(
-                      height: ScreenUtil().setHeight(90),
+                      height: ScreenUtil().setHeight(50),
                     ),
                     Center(
                       child: Text(
@@ -43,9 +43,6 @@ class _BenefitsPage extends State<BenefitsPage> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                    ),
-                    SizedBox(
-                      height: ScreenUtil().setHeight(20),
                     ),
                     SizedBox(
                       height: ScreenUtil().setHeight(20),
@@ -130,8 +127,7 @@ class _BenefitsPage extends State<BenefitsPage> {
                                 image: new DecorationImage(
                                   alignment: Alignment.centerLeft,
                               image: new ExactAssetImage(
-                                'assets/calculator.png',
-                                scale: 1.5
+                                'images/beneficios-aws.jpg',
                               ),
                                       )
                                         ),
@@ -140,7 +136,7 @@ class _BenefitsPage extends State<BenefitsPage> {
                                   ),
                                   new Padding(
                                     padding: EdgeInsets.fromLTRB(0, 0, 20, 0 ),
-                                     child: Text('ContaJá \n 3 meses de acesso gratuito \n aos serviços da ContaJá',
+                                     child: Text('Aws \n US\$2.000,00 dólares\nem crédito válido\npor 2 anos!',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontFamily: 'BellotaText',
@@ -156,7 +152,7 @@ class _BenefitsPage extends State<BenefitsPage> {
                           color: palleteBlue,
                           onPressed: () {}, 
                           child: Text(
-                            'Comprar \n 500 XP',
+                            'Comprar \n 970 XP',
                             textAlign: TextAlign.center,
                             style: TextStyle(color: Colors.white, fontFamily: 'BellotaText',),
                             )
@@ -184,8 +180,7 @@ class _BenefitsPage extends State<BenefitsPage> {
                                 image: new DecorationImage(
                                   alignment: Alignment.centerLeft,
                               image: new ExactAssetImage(
-                                'assets/cloud.png',
-                                scale: 1.5
+                                'images/beneficios-trello.jpg',
                               ),
                                       )
                                         ),
@@ -194,7 +189,7 @@ class _BenefitsPage extends State<BenefitsPage> {
                                   ),
                                   new Padding(
                                     padding: EdgeInsets.fromLTRB(0, 0, 20, 0 ),
-                                     child: Text('NaNuvem \n R\$ 1000 de hospedagem \n nos serviços da NaNuvem',
+                                     child: Text('Trello\n6 meses free no\nTrello Gold!',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontFamily: 'BellotaText',
@@ -210,7 +205,7 @@ class _BenefitsPage extends State<BenefitsPage> {
                           color: palleteBlue,
                           onPressed: () {}, 
                           child: Text(
-                            'Comprar \n 600 XP',
+                            'Comprar \n500 XP',
                             textAlign: TextAlign.center,
                             style: TextStyle(color: Colors.white, fontFamily: 'BellotaText',),
                             )
@@ -238,7 +233,7 @@ class _BenefitsPage extends State<BenefitsPage> {
                                 image: new DecorationImage(
                                   alignment: Alignment.centerLeft,
                               image: new ExactAssetImage(
-                                'assets/curso.png',
+                                'images/beneficios-contaazul.jpg',
                                 scale: 1.0
                               ),
                                       )
@@ -248,7 +243,7 @@ class _BenefitsPage extends State<BenefitsPage> {
                                   ),
                                   new Padding(
                                     padding: EdgeInsets.fromLTRB(0, 0, 20, 0 ),
-                                     child: Text('PRIMECURSOS \n Descontos de até 50% \n nos certificados da \n PRIMECURSOS',
+                                     child: Text('ContaAzul\n 6 meses de plano\nmicro grátis!',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontFamily: 'BellotaText',
@@ -264,7 +259,7 @@ class _BenefitsPage extends State<BenefitsPage> {
                           color: palleteBlue,
                           onPressed: () {}, 
                           child: Text(
-                            'Comprar \n 800 XP',
+                            'Comprar \n 650XP',
                             textAlign: TextAlign.center,
                             style: TextStyle(color: Colors.white, fontFamily: 'BellotaText',),
                             )

@@ -273,7 +273,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                         CrossAxisAlignment.start,
                                     children: <Widget>[
                                       Text(
-                                        "ContaJá",
+                                        "AWS",
                                         style: TextStyle(
                                            fontFamily: 'BellotaText',
                                             fontSize: 18,
@@ -295,10 +295,10 @@ class _ProfilePageState extends State<ProfilePage> {
                                   crossAxisAlignment: CrossAxisAlignment.end,
                                   children: <Widget>[
                                     Text(
-                                      "3 meses",
+                                      "US\$2.000,00 dólares",
                                       style: TextStyle(
                                          fontFamily: 'BellotaText',
-                                          fontSize: 18,
+                                          fontSize: 15,
                                           fontWeight: FontWeight.w700,
                                           color: Colors.lightGreen),
                                     ),
@@ -344,7 +344,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(18))),
                                   child: Icon(
-                                    Icons.cloud,
+                                    Icons.dashboard,
                                     color: Color(0xff8380B6),
                                   ),
                                   padding: EdgeInsets.all(12),
@@ -358,7 +358,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                         CrossAxisAlignment.start,
                                     children: <Widget>[
                                       Text(
-                                        "NaNuvem",
+                                        "Trello",
                                         style: TextStyle(
                                            fontFamily: 'BellotaText',
                                             fontSize: 18,
@@ -380,7 +380,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                   crossAxisAlignment: CrossAxisAlignment.end,
                                   children: <Widget>[
                                     Text(
-                                      "1 mês",
+                                      "6 meses Gold",
                                       style: TextStyle(
                                          fontFamily: 'BellotaText',
                                           fontSize: 18,
