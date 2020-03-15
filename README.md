@@ -1,3 +1,3 @@
-# RiseArea
+# RiseHub
 
 Coming soon...
