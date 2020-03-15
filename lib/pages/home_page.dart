@@ -1,3 +1,4 @@
+import 'package:RiseArea/ResultsScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:RiseArea/utils/colors.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
@@ -34,165 +35,199 @@ class _MainPageState extends State<MainPage> {
     ];
 
     return Scaffold(
-        backgroundColor: Colors.white,
-        appBar: GradientAppBar(
-          automaticallyImplyLeading: false,
-          title: Row(
+      backgroundColor: Colors.white,
+      appBar: GradientAppBar(
+        automaticallyImplyLeading: false,
+        title: Row(
 //          mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                'images/rocket4.png',
-                fit: BoxFit.contain,
-                height: 42,
-              ),
-              Container(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Row(
-                    children: <Widget>[
-                      Text('Lucas Carvalho',
-                      style: TextStyle( fontFamily: 'BellotaText',),
+          children: [
+            Image.asset(
+              'images/rocket4.png',
+              fit: BoxFit.contain,
+              height: 42,
+            ),
+            Container(
+                padding: const EdgeInsets.all(15.0),
+                child: Row(
+                  children: <Widget>[
+                    Text(
+                      'Lucas Carvalho',
+                      style: TextStyle(
+                        fontFamily: 'BellotaText',
                       ),
-                      SizedBox(
-                        width: 5,
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 5.0),
+                      child: Text(
+                        "XP: 150",
+                        style: TextStyle(
+                            fontFamily: 'BellotaText',
+                            fontSize: 12.0,
+                            color: Colors.limeAccent),
                       ),
-                      Padding(
-                        padding: EdgeInsets.only(top: 5.0),
-                        child: Text(
-                          "XP: 150",
-                          style: TextStyle(
-                             fontFamily: 'BellotaText',
-                              fontSize: 12.0, color: Colors.limeAccent),
-                        ),
-                      )
-                    ],
-                  ))
-            ],
-          ),
+                    )
+                  ],
+                ))
+          ],
+        ),
 //        centerTitle: true,
-          gradient: LinearGradient(
-              colors: [myColors.palleteBlue, myColors.palleteMediumBlue]),
-          actions: <Widget>[
-            PopupMenuButton<String>(
-              onSelected: choiceAction,
-              itemBuilder: (BuildContext context) {
-                return Constants.choices.map((String choice) {
-                  return PopupMenuItem<String>(
-                    value: choice,
-                    child: Text(choice, textAlign: TextAlign.center,),
-                  );
-                }).toList();
-              },
+        gradient: LinearGradient(
+            colors: [myColors.palleteBlue, myColors.palleteMediumBlue]),
+        actions: <Widget>[
+          PopupMenuButton<String>(
+            onSelected: choiceAction,
+            itemBuilder: (BuildContext context) {
+              return Constants.choices.map((String choice) {
+                return PopupMenuItem<String>(
+                  value: choice,
+                  child: Text(
+                    choice,
+                    textAlign: TextAlign.center,
+                  ),
+                );
+              }).toList();
+            },
+          ),
+        ],
+      ),
+      body: Container(
+        color: Colors.white,
+        child: Column(
+          children: <Widget>[
+            SizedBox(
+              height: 20.0,
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  '\t\t\tRealizar Teste',
+                  style: TextStyle(
+                      fontFamily: 'BellotaText',
+                      color: Colors.black,
+                      fontSize: 26.0),
+                ),
+              ],
+            ),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20.0),
+              ),
+              elevation: 2,
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+              color: Colors.redAccent,
+              child: Container(
+                width: 400,
+                height: 200,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.only(top: 30.0),
+                      child: Column(
+                        children: <Widget>[
+                          Text(
+                            'Business Match',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 30.0,
+                                fontFamily: "BellotaText"),
+                          ),
+                          MaterialButton(
+                            height: 58,
+                            minWidth: 340,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: new BorderRadius.circular(12)),
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  new MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          new ResultsScreen()));
+                            },
+                            child: Text(
+                              "Começar",
+                              style: TextStyle(
+                                fontSize: 24,
+                                color: Colors.black,
+                              ),
+                            ),
+                            color: Colors.white,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(height: 20.0),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  '\t\t\tAtualizar Dados',
+                  style: TextStyle(
+                      fontFamily: "BellotaText",
+                      color: Colors.black,
+                      fontSize: 26.0),
+                ),
+              ],
+            ),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20.0),
+                side: BorderSide(
+                  color: Colors.green,
+                  width: 1.0,
+                ),
+              ),
+              color: Colors.green,
+              elevation: 2,
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+              child: Container(
+                width: 400,
+                height: 150,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      'Ganhe XP atualizando as informações do seu negócio',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 14.0,
+                          fontFamily: "BellotaText"),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Center(
+                      child: MaterialButton(
+                        height: 58,
+                        minWidth: 340,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(12)),
+                        onPressed: () {},
+                        child: Text(
+                          "Iniciar",
+                          style: TextStyle(
+                            fontSize: 24,
+                            color: Colors.black,
+                          ),
+                        ),
+                        color: Colors.lightGreen,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ],
         ),
-        body: Container(
-          color: Colors.blue,
-          child: Column(
-            children: <Widget>[
-              SizedBox(
-                height: 20.0,
-              ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Text(
-                    '\t\t\tProgramação',
-                    style: TextStyle(
-                        fontFamily: 'CaviarDreamsBold',
-                        color: Colors.black,
-                        fontSize: 26.0),
-                  ),
-                ],
-              ),
-              Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0),
-                ),
-                elevation: 2,
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                child: Container(
-                  width: 300,
-                  height: 150,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Padding(
-                        padding: EdgeInsets.only(top: 30.0),
-                        child: Column(
-                          children: <Widget>[
-                            Text(
-                              'Coffee Break',
-                              style:
-                              TextStyle(color: Colors.white, fontSize: 30.0),
-                            ),
-                            Text(
-                              '08:00 - 08:45',
-                              style:
-                              TextStyle(color: myColors.text, fontSize: 20.0),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(right: 80.0, top: 42.0),
-                              child: Text(
-                                'Próximo: Apresentação dos Desafios',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 10.0,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(height: 20.0),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Text(
-                    '\t\t\tMentoria',
-                    style: TextStyle(
-                        fontFamily: 'CaviarDreamsBold',
-                        color: Colors.black,
-                        fontSize: 26.0),
-                  ),
-                ],
-              ),
-              Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0),
-                  side: BorderSide(
-                    color: Colors.red,
-                    width: 1.0,
-                  ),
-                ),
-                color: Colors.lightBlue,
-                elevation: 2,
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                child: Container(
-                  width: 400,
-                  height: 150,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Center(
-                        child: Text(
-                         "oi",
-                          style: TextStyle(
-                              fontStyle: FontStyle.italic,
-                              color: Colors.white,
-                              fontSize: 18.0),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
+      ),
     );
   }
 

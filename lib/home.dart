@@ -4,6 +4,7 @@ import 'package:RiseArea/pages/profile_page.dart';
 import 'package:RiseArea/pages/home_page.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
+
 class Home extends StatefulWidget {
   @override
   _Home createState() => _Home();
