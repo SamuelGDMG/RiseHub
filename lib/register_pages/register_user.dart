@@ -1,4 +1,4 @@
-import 'package:RiseArea/pages/congratulation.dart';
+import 'package:RiseHub/pages/congratulation.dart';
 import 'package:flutter/material.dart';
 import 'package:slimy_card/slimy_card.dart';
 

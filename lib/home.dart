@@ -1,7 +1,7 @@
-import 'package:RiseArea/pages/rewards_page.dart';
+import 'package:RiseHub/pages/rewards_page.dart';
 import 'package:flutter/material.dart';
-import 'package:RiseArea/pages/profile_page.dart';
-import 'package:RiseArea/pages/home_page.dart';
+import 'package:RiseHub/pages/profile_page.dart';
+import 'package:RiseHub/pages/home_page.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 

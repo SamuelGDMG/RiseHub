@@ -1,8 +1,8 @@
-import 'package:RiseArea/ResultsScreen.dart';
-import 'package:RiseArea/login-screen.dart';
+import 'package:RiseHub/QuestionsScreen.dart';
+import 'package:RiseHub/login-screen.dart';
 
 import 'package:flutter/material.dart';
-import 'package:RiseArea/utils/colors.dart';
+import 'package:RiseHub/utils/colors.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'dart:io';
 import 'package:flip_card/flip_card.dart';
@@ -153,7 +153,7 @@ class _MainPageState extends State<MainPage> {
                                   context,
                                   new MaterialPageRoute(
                                       builder: (BuildContext context) =>
-                                          new ResultsScreen()));
+                                          new QuestionsScreen()));
                             },
                             child: Text(
                               "Começar",

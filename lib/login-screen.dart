@@ -1,4 +1,4 @@
-import 'package:RiseArea/register_pages/register_user.dart';
+import 'package:RiseHub/register_pages/register_user.dart';
 import 'package:flutter/material.dart';
 import './Animation/FadeAnimation.dart';
 import 'home.dart';
@@ -54,11 +54,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   1,
                   Center(
                   child: Text(
-                    "RiseArea",
+                    "RiseHub",
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 40,
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
+                      fontFamily: "BellotaText",
                     ),
                   ),
                   ),

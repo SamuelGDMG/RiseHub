@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:RiseArea/home.dart';
+import 'package:RiseHub/home.dart';
 
 Color palleteLightGrey = Color(0xffc4d1fa);
 Color palleteLightBlue = Color(0xff829ef6);

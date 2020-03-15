@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:clay_containers/clay_containers.dart';
 import 'package:timer_builder/timer_builder.dart';
-import 'package:shimmer/shimmer.dart';
 import 'color_loader.dart';
-import 'package:RiseArea/ResultsScreen.dart';
-
+import 'package:RiseHub/ResultsScreen.dart';
 
 class LoadingPage extends StatefulWidget {
   @override
@@ -48,36 +45,26 @@ class _LoadingPageState extends State<LoadingPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   ColorLoader2(
-                    color1: Colors.green,
-                    color2: Colors.yellow,
-                    color3: Colors.blue,
+                    color1: Colors.blue,
+                    color2: Colors.red,
+                    color3: Colors.black,
                   ),
                 ],
               ),
               SizedBox(width: 50.0, height: 50.0),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  SizedBox(height: 15, width: 50.0,),
-                  Container(
-                    width: 400.0,
-                    height: 180.0,
-                    child: Shimmer.fromColors(
-                      baseColor: Colors.green,
-                      highlightColor: Colors.yellow,
-                      child: Text(
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
                         loadingPhrases[i],
                         style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 18,
-                          fontFamily: "SpartanRegular",
+                          color: Colors.blue,
+                          fontSize: 24,
+                          fontFamily: "BellotaText",
                         ),
                       ),
-                    ),
+                    ],
                   ),
-                  SizedBox(height: 20),
-                ],
-              ),
             ],
           ),
         ),
