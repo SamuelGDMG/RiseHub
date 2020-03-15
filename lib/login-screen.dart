@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import './Animation/FadeAnimation.dart';
+import 'home.dart';
+import 'old/business-information.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -132,9 +134,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                   height: 20.0,
                 ),
-                FadeAnimation(
-                  1,
-                  Container(
+                  GestureDetector(
+                     onTap: () {
+                        Navigator.push(
+                            context,
+                            new MaterialPageRoute(
+                                builder: (BuildContext context) =>  new Home()));
+                      },
+                  child: Container(
                     height: 50,
                     margin: EdgeInsets.symmetric(horizontal: 60),
                     decoration: BoxDecoration(
@@ -154,9 +161,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                   height: 20.0,
                 ),
-                FadeAnimation(
-                  1,
-                  Center(
+                GestureDetector(
+                     onTap: () {
+                        Navigator.pop(context);
+                      },
+                  child: Center(
                     child: Text(
                       "Criar conta",
                       style: TextStyle(
