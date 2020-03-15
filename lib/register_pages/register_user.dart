@@ -1,3 +1,4 @@
+import 'package:Business_Monsters/pages/congratulation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:slimy_card/slimy_card.dart';
@@ -159,7 +160,7 @@ class _SlimyCardPage2 extends State<SlimyCardPage2> {
                         Navigator.push(
                             context,
                             new MaterialPageRoute(
-                                builder: (BuildContext context) => SignupComplete()));
+                                builder: (BuildContext context) => Congratulations()));
                       },
                       child: Container(
                         width: double.infinity,
