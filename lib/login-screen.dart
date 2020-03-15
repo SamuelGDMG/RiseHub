@@ -1,217 +1,176 @@
-import 'package:custom_switch/custom_switch.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:Business_Monsters/register_pages/register_user.dart';
-import 'package:Business_Monsters/home.dart';
+import './Animation/FadeAnimation.dart';
+
+class LoginScreen extends StatefulWidget {
+  @override
+  _LoginScreenState createState() => _LoginScreenState();
+}
 
 Color palleteLightGrey = Color(0xffc4d1fa);
 Color palleteLightBlue = Color(0xff829ef6);
 Color palleteMediumBlue = Color(0xff3b66f1);
 Color palleteBlue = Color(0xff1144e8);
 
-class LoginScreen extends StatefulWidget {
-  LoginScreen({Key key}) : super(key: key);
-
-  @override
-  _LoginScreenState createState() => _LoginScreenState();
-}
 
 class _LoginScreenState extends State<LoginScreen> {
-  bool status = true;
-
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context,
-        width: 1080, height: 1860, allowFontScaling: false);
     return Scaffold(
-        backgroundColor: Color(0xFFF1F3F6),
-        body: SafeArea(
-          child: SingleChildScrollView(
-            child: Container(
-                margin: EdgeInsets.symmetric(
-                    horizontal: ScreenUtil().setWidth(120)),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    SizedBox(
-                      height: ScreenUtil().setHeight(200),
-                    ),
-                    Center(
-                      child: Text(
-                        "Start UP",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontFamily: 'LuckiestGuy',
-                            color: palleteMediumBlue,
-                            fontSize: 36,
-                            fontWeight: FontWeight.bold,
-                            shadows: [
-                            Shadow( // bottomLeft
-                            offset: Offset(-2.5, -2.5),
-                        color: Colors.white,
-                      ),
-                      Shadow( // bottomRight
-                          offset: Offset(-2.5, -2.5),
-                          color: Colors.white
-                      ),
-                      Shadow( // topRight
-                          offset: Offset(2.5, 2.5),
-                          color: Colors.white
-                      ),
-                      Shadow( // topLeft
-                          offset: Offset(-2.5, 2.5),
-                          color: Colors.white
-                      ),
-                      ],
-                        ),
+      resizeToAvoidBottomInset: false,
+      backgroundColor: Colors.white,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Container(
+            height: 200,
+            child: Stack(
+              children: <Widget>[
+                Positioned(
+                    child: FadeAnimation(
+                  1,
+                  Container(
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage("images/1.jpg"),
                       ),
                     ),
-                    SizedBox(
-                      height: ScreenUtil().setHeight(170),
+                  ),
+                ))
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                FadeAnimation(
+                  1,
+                  Center(
+                  child: Text(
+                    "RiseArea",
+                    style: TextStyle(
+                      fontSize: 30,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
                     ),
-                    SizedBox(
-                      height: ScreenUtil().setHeight(20),
+                  ),
+                  ),
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                FadeAnimation(
+                  1,
+                  Container(
+                    padding: EdgeInsets.all(8.0),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      color: Colors.transparent,
                     ),
-                    Stack(
-                      children: <Widget>[
-                        TextField(
-                          style:
-                              TextStyle(color: palleteMediumBlue),
-                          decoration: InputDecoration(
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: palleteMediumBlue,
-                                    width: 2),
-                              ),
-                              labelText: "Usuário",
-                              labelStyle: TextStyle(
-                                fontFamily: 'LuckiestGuy',
-                                  color: palleteMediumBlue,
-                                  fontSize: 14)),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: ScreenUtil().setHeight(100),
-                    ),
-                    TextField(
-                      style: TextStyle(color: palleteMediumBlue),
-                      decoration: InputDecoration(
-                          focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                                color: palleteMediumBlue,
-                                width: 2),
-                          ),
-                          labelText: "Senha",
-                          labelStyle: TextStyle(
-                            fontFamily: 'LuckiestGuy',
-                              color: palleteMediumBlue,
-                              fontSize: 14)),
-                    ),
-                    SizedBox(
-                      height: ScreenUtil().setHeight(70),
-                    ),
-                    Row(
+                    child: Column(
                       children: <Widget>[
                         Container(
+                          padding: EdgeInsets.all(10.0),
                           decoration: BoxDecoration(
+                            border: Border(
+                              bottom: BorderSide(
+                                color: Colors.grey[100],
                               ),
-                          child: CustomSwitch(
-                            activeColor: palleteMediumBlue,
-                            value: status,
-                            onChanged: (value) {
-                              setState(() {
-                                status = value;
-                              });
-                            },
+                            ),
+                          ),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: "Usuário",
+                              hintStyle: TextStyle(color: Colors.grey,
+                              fontFamily: 'BellotaText',
+                              ),
+                            ),
                           ),
                         ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          "Lembrar dados",
-                          style:
-                              TextStyle(color: palleteLightBlue, fontSize: 14, fontFamily: 'LuckiestGuy',),
-                        ),
-                        Spacer(),
+                        Container(
+                          padding: EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                            border: Border(
+                              bottom: BorderSide(
+                                color: Colors.grey[100],
+                              ),
+                            ),
+                          ),
+                          child: TextField(
+                            decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: "Senha",
+                                hintStyle: TextStyle(color: Colors.grey,
+                                fontFamily: 'BellotaText',)),
+                          ),
+                        )
                       ],
                     ),
-                    SizedBox(
-                      height: ScreenUtil().setHeight(130),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            new MaterialPageRoute(
-                                builder: (BuildContext context) => new Home()));
-                      },
-                      child: Container(
-                        width: double.infinity,
-                        alignment: Alignment.center,
-                        height: ScreenUtil().setHeight(120),
-                        margin: EdgeInsets.symmetric(vertical: 15),
-                        decoration: BoxDecoration(
-                            color: Color(0xFFF1F3F6),
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
-                            boxShadow: [
-                              BoxShadow(
-                                  offset: Offset(10, 10),
-                                  color: Color(0xFF4D70A6).withOpacity(0.2),
-                                  blurRadius: 16),
-                              BoxShadow(
-                                  offset: Offset(-10, -10),
-                                  color: Color.fromARGB(170, 255, 255, 255),
-                                  blurRadius: 10),
-                            ]),
-                        child: Text(
-                          "Login",
-                          style: TextStyle(
-                            fontFamily: 'LuckiestGuy',
-                              color: palleteMediumBlue,
-                              fontSize: 16),
-                        ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                Center(
+                  child: FadeAnimation(
+                    1,
+                    Text(
+                      "Esqueceu a senha?",
+                      style: TextStyle(
+                        fontFamily: 'BellotaText',
+                        color: palleteMediumBlue,
                       ),
                     ),
-                    
-                     GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            new MaterialPageRoute(
-                                builder: (BuildContext context) => new SlimyCardPage2()));
-                      },
-                      child: Container(
-                        width: double.infinity,
-                        alignment: Alignment.center,
-                        height: ScreenUtil().setHeight(120),
-                        margin: EdgeInsets.symmetric(vertical: 15),
-                        decoration: BoxDecoration(
-                            color: Color(0xFFF1F3F6),
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
-                            boxShadow: [
-                              BoxShadow(
-                                  offset: Offset(10, 10),
-                                  color: Color(0xFF4D70A6).withOpacity(0.2),
-                                  blurRadius: 16),
-                              BoxShadow(
-                                  offset: Offset(-10, -10),
-                                  color: Color.fromARGB(170, 255, 255, 255),
-                                  blurRadius: 10),
-                            ]),
-                        child: Text(
-                          "Registrar",
-                          style: TextStyle(
-                            fontFamily: 'LuckiestGuy',
-                              color: palleteMediumBlue,
-                              fontSize: 16),
-                        ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                FadeAnimation(
+                  1,
+                  Container(
+                    height: 50,
+                    margin: EdgeInsets.symmetric(horizontal: 60),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),
+                      gradient: LinearGradient(
+            colors: [palleteLightBlue, palleteMediumBlue]),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Login",
+                        style: TextStyle(color: Colors.white, 
+                        fontFamily: 'BellotaText',),
                       ),
                     ),
-                  ],
-                )),
-          ),
-        ));
+                  ),
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                FadeAnimation(
+                  1,
+                  Center(
+                    child: Text(
+                      "Criar conta",
+                      style: TextStyle(
+                        color: palleteMediumBlue,
+                        fontFamily: 'BellotaText',
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
+    );
   }
 }

@@ -2,10 +2,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-Color palleteBlue = Color(0xff010a43);
-Color palleteLightPink = Color(0xffffc2c2);
-Color palleteMediumPink = Color(0xffff9d9d);
-Color palletePink = Color(0xffff2e63);
+Color palleteLightGrey = Color(0xffc4d1fa);
+Color palleteLightBlue = Color(0xff829ef6);
+Color palleteMediumBlue = Color(0xff3b66f1);
+Color palleteBlue = Color(0xff1144e8);
 
 class BenefitsPage extends StatefulWidget {
   BenefitsPage({Key key}) : super(key: key);
@@ -37,28 +37,10 @@ class _BenefitsPage extends State<BenefitsPage> {
                         "Business Monsters",
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontFamily: 'LuckiestGuy',
-                          color: palleteMediumPink,
+                          fontFamily: 'BellotaText',
+                          color: palleteMediumBlue,
                           fontSize: 36,
                           fontWeight: FontWeight.bold,
-                          shadows: [
-                            Shadow( // bottomLeft
-                              offset: Offset(-2.5, -2.5),
-                              color: Colors.black,
-                            ),
-                            Shadow( // bottomRight
-                                offset: Offset(-2.5, -2.5),
-                                color: Colors.black,
-                            ),
-                            Shadow( // topRight
-                                offset: Offset(2.5, 2.5),
-                                color: Colors.black,
-                            ),
-                            Shadow( // topLeft
-                                offset: Offset(-2.5, 2.5),
-                                color: Colors.black,
-                            ),
-                          ],
                         ),
                       ),
                     ),
@@ -69,17 +51,17 @@ class _BenefitsPage extends State<BenefitsPage> {
                       height: ScreenUtil().setHeight(20),
 ),
                       TextField(
-                      style: TextStyle(color: palleteMediumPink),
+                      style: TextStyle(color: palleteMediumBlue),
                       decoration: InputDecoration(
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
-                                color: palleteMediumPink,
+                                color: palleteMediumBlue,
                                 width: 2),
                           ),
                           labelText: "Pesquisar",
                           labelStyle: TextStyle(
-                            fontFamily: 'LuckiestGuy',
-                              color: palleteMediumPink,
+                            fontFamily: 'BellotaText',
+                              color: palleteMediumBlue,
                               fontSize: 14)),
                     ),
                   
@@ -87,12 +69,12 @@ class _BenefitsPage extends State<BenefitsPage> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
                         FlatButton(
-                          color: palleteMediumPink,
+                          color: palleteMediumBlue,
                           onPressed: () {}, 
                           child: Text(
                             'Buscar',
                             textAlign: TextAlign.center,
-                            style: TextStyle(color: Colors.white, fontFamily: 'LuckiestGuy'),
+                            style: TextStyle(color: Colors.white, fontFamily: 'BellotaText'),
                             )
                           )
                       ],
@@ -104,8 +86,8 @@ class _BenefitsPage extends State<BenefitsPage> {
                             "Benefícios",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontFamily: 'LuckiestGuy',
-                              color: palleteMediumPink,
+                              fontFamily: 'BellotaText',
+                              color: palleteMediumBlue,
                               fontSize: 26,
                               fontWeight: FontWeight.bold,
                               shadows: [
@@ -161,8 +143,8 @@ class _BenefitsPage extends State<BenefitsPage> {
                                      child: Text('ContaJá \n 3 meses de acesso gratuito \n aos serviços da ContaJá',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontFamily: 'LuckiestGuy',
-                              color: palleteMediumPink,
+                              fontFamily: 'BellotaText',
+                              color: palleteMediumBlue,
                               fontSize: 12
                             ),
                             ),
@@ -171,12 +153,12 @@ class _BenefitsPage extends State<BenefitsPage> {
                            padding: EdgeInsets.fromLTRB(0, 0, 10, 0 ),
                           child:
                           FlatButton(
-                          color: palletePink,
+                          color: palleteBlue,
                           onPressed: () {}, 
                           child: Text(
                             'Comprar \n 500 XP',
                             textAlign: TextAlign.center,
-                            style: TextStyle(color: Colors.white, fontFamily: 'LuckiestGuy',),
+                            style: TextStyle(color: Colors.white, fontFamily: 'BellotaText',),
                             )
                           )
                           )
@@ -215,8 +197,8 @@ class _BenefitsPage extends State<BenefitsPage> {
                                      child: Text('NaNuvem \n R\$ 1000 de hospedagem \n nos serviços da NaNuvem',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontFamily: 'LuckiestGuy',
-                              color: palleteMediumPink,
+                              fontFamily: 'BellotaText',
+                              color: palleteMediumBlue,
                               fontSize: 12
                             ),
                             ),
@@ -225,12 +207,12 @@ class _BenefitsPage extends State<BenefitsPage> {
                            padding: EdgeInsets.fromLTRB(0, 0, 10, 0 ),
                           child:
                           FlatButton(
-                          color: palletePink,
+                          color: palleteBlue,
                           onPressed: () {}, 
                           child: Text(
                             'Comprar \n 600 XP',
                             textAlign: TextAlign.center,
-                            style: TextStyle(color: Colors.white, fontFamily: 'LuckiestGuy',),
+                            style: TextStyle(color: Colors.white, fontFamily: 'BellotaText',),
                             )
                           )
                           )
@@ -269,8 +251,8 @@ class _BenefitsPage extends State<BenefitsPage> {
                                      child: Text('PRIMECURSOS \n Descontos de até 50% \n nos certificados da \n PRIMECURSOS',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontFamily: 'LuckiestGuy',
-                              color: palleteMediumPink,
+                              fontFamily: 'BellotaText',
+                              color: palleteMediumBlue,
                               fontSize: 12
                             ),
                             ),
@@ -279,12 +261,12 @@ class _BenefitsPage extends State<BenefitsPage> {
                            padding: EdgeInsets.fromLTRB(0, 0, 20, 0 ),
                           child:
                           FlatButton(
-                          color: palletePink,
+                          color: palleteBlue,
                           onPressed: () {}, 
                           child: Text(
                             'Comprar \n 800 XP',
                             textAlign: TextAlign.center,
-                            style: TextStyle(color: Colors.white, fontFamily: 'LuckiestGuy',),
+                            style: TextStyle(color: Colors.white, fontFamily: 'BellotaText',),
                             )
                           )
                           )

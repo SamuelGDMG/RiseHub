@@ -12,6 +12,7 @@ dependencies:
   gradient_app_bar: ^0.1.3
   provider: 
   slimy_card:
+  simple_animations: ^1.3.4
   flutter_screenutil: ^1.0.2
   font_awesome_flutter: ^8.5.0
   flutter_staggered_animations: "^0.1.2"
@@ -39,15 +40,16 @@ flutter:
     - assets/playbutton.png
     - assets/sword.png
     - assets/book.png
+    - images/1.jpg
 
   fonts:
-    - family: LuckiestGuy
+    - family: BastardusSans
       fonts:
-        - asset: assets/fonts/LuckiestGuy-Regular.ttf
+        - asset: assets/fonts/BastardusSans.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
-    - family: Squada One
+    - family: BellotaText
       fonts:
-        - asset: assets/fonts/SquadaOne-Regular.ttf
+        - asset: assets/fonts/BellotaText-Bold.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
