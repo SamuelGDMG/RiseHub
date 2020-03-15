@@ -1,3 +1,4 @@
+import 'package:Business_Monsters/register_pages/register_user.dart';
 import 'package:flutter/material.dart';
 import './Animation/FadeAnimation.dart';
 import 'home.dart';
@@ -163,7 +164,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 GestureDetector(
                      onTap: () {
-                        Navigator.pop(context);
+                        Navigator.push(
+                            context,
+                            new MaterialPageRoute(
+                                builder: (BuildContext context) => RegisterAcc()));
                       },
                   child: Center(
                     child: Text(
