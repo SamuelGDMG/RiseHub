@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:Business_Monsters/blocs/theme.dart';
-import 'package:Business_Monsters/login-screen.dart';
+import 'package:RiseArea/blocs/theme.dart';
+import 'package:RiseArea/login-screen.dart';
 
 void main() {
   runApp(MyApp());

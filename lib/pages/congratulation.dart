@@ -1,6 +1,6 @@
-import 'package:Business_Monsters/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:RiseArea/home.dart';
 
 Color palleteBlue = Color(0xff010a43);
 Color palleteLightPink = Color(0xffffc2c2);

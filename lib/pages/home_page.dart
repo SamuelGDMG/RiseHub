@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:Business_Monsters/utils/colors.dart';
-import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'package:RiseArea/utils/colors.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'dart:io';
 import 'package:flip_card/flip_card.dart';
@@ -33,25 +32,6 @@ class _MainPageState extends State<MainPage> {
       myColors.block2,
       myColors.block3,
     ];
-    List<String> title1 = [
-      "\t\t\t\t\t\tMindset Empreendedor",
-      "UX/UI",
-      "Pessoas",
-      "Finanças",
-      "Marketing",
-      "Finanças"
-    ];
-    List<String> title2 = [
-      "Business",
-      "Marketing",
-      "Tecnologia",
-      "Missão 0",
-      "UX/UI",
-      "Business"
-    ];
-
-    List<String> desc = ["0/22", "0/53", "0/42", "0/30", "0/61", "0/34"];
-    List<String> desc2 = ["0/30", "0/61", "0/34", "0/20", "0/53", "0/42"];
 
     return Scaffold(
         backgroundColor: Colors.white,
@@ -106,35 +86,111 @@ class _MainPageState extends State<MainPage> {
           ],
         ),
         body: Container(
-          child: Container
-            (
-              margin: EdgeInsets.symmetric(vertical: 16.0, horizontal: 54.0),
-              child: Material
-                (
-                elevation: 8.0,
-                color: Colors.black,
-                borderRadius: BorderRadius.circular(32.0),
-                child: InkWell
-                  (
-                  onTap: () {},
-                  child: Padding
-                    (
-                    padding: EdgeInsets.all(12.0),
-                    child: Row
-                      (
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>
-                      [
-                        Icon(Icons.add, color: Colors.white),
-                        Padding(padding: EdgeInsets.only(right: 16.0)),
-                        Text('ADD A ITEM', style: TextStyle(color: Colors.white))
-                      ],
-                    ),
+          color: Colors.blue,
+          child: Column(
+            children: <Widget>[
+              SizedBox(
+                height: 20.0,
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    '\t\t\tProgramação',
+                    style: TextStyle(
+                        fontFamily: 'CaviarDreamsBold',
+                        color: Colors.black,
+                        fontSize: 26.0),
+                  ),
+                ],
+              ),
+              Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                ),
+                elevation: 2,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                child: Container(
+                  width: 300,
+                  height: 150,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.only(top: 30.0),
+                        child: Column(
+                          children: <Widget>[
+                            Text(
+                              'Coffee Break',
+                              style:
+                              TextStyle(color: Colors.white, fontSize: 30.0),
+                            ),
+                            Text(
+                              '08:00 - 08:45',
+                              style:
+                              TextStyle(color: myColors.text, fontSize: 20.0),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(right: 80.0, top: 42.0),
+                              child: Text(
+                                'Próximo: Apresentação dos Desafios',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 10.0,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-              )
+              ),
+              SizedBox(height: 20.0),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    '\t\t\tMentoria',
+                    style: TextStyle(
+                        fontFamily: 'CaviarDreamsBold',
+                        color: Colors.black,
+                        fontSize: 26.0),
+                  ),
+                ],
+              ),
+              Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                  side: BorderSide(
+                    color: Colors.red,
+                    width: 1.0,
+                  ),
+                ),
+                color: Colors.lightBlue,
+                elevation: 2,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                child: Container(
+                  width: 400,
+                  height: 150,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Center(
+                        child: Text(
+                         "oi",
+                          style: TextStyle(
+                              fontStyle: FontStyle.italic,
+                              color: Colors.white,
+                              fontSize: 18.0),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
     );

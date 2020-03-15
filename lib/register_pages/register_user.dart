@@ -1,6 +1,5 @@
-import 'package:Business_Monsters/pages/congratulation.dart';
+import 'package:RiseArea/pages/congratulation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:slimy_card/slimy_card.dart';
 
 Color palleteLightGrey = Color(0xffc4d1fa);

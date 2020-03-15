@@ -3,7 +3,7 @@ import 'package:clay_containers/clay_containers.dart';
 import 'package:timer_builder/timer_builder.dart';
 import 'package:shimmer/shimmer.dart';
 import 'color_loader.dart';
-import 'package:Business_Monsters/ResultsScreen.dart';
+import 'package:RiseArea/ResultsScreen.dart';
 
 
 class LoadingPage extends StatefulWidget {
