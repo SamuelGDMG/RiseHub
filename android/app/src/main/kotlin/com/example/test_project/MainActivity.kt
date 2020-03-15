@@ -1,4 +1,4 @@
-package com.example.business_monsters
+package com.example.rise_hub
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
