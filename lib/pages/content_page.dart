@@ -52,7 +52,7 @@ class _ContentPageState extends State<ContentPage> {
         ),
 //        centerTitle: true,
         gradient: LinearGradient(
-            colors: [myColors.palletePink, myColors.palleteMediumPink]),
+            colors: [myColors.palleteBlue, myColors.palleteMediumBlue]),
         actions: <Widget>[
           Padding(
               padding: EdgeInsets.only(right: 10.0),
@@ -104,7 +104,7 @@ class _ContentPageState extends State<ContentPage> {
                               margin: EdgeInsets.fromLTRB(0, 15, 0, 5),
                               width: 390,
                               child: Card(
-                                color: myColors.palletePink,
+                                color: myColors.palleteBlue,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(50.0),
                                 ),
@@ -174,7 +174,7 @@ class _ContentPageState extends State<ContentPage> {
                 width: 100,
                 height: 100,
                 child: Container(
-                  decoration: BoxDecoration(color: myColors.palleteMediumPink),
+                  decoration: BoxDecoration(color: myColors.palleteMediumBlue),
                   child: Center(
                     child: Text(
                       text,

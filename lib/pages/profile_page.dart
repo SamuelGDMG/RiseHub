@@ -1,6 +1,7 @@
 import 'package:Business_Monsters/pages/content_page.dart';
 import 'package:flutter/material.dart';
 
+
 class ProfilePage extends StatefulWidget {
   @override
   _ProfilePageState createState() => _ProfilePageState();
@@ -10,7 +11,7 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: myColors.palleteLightPink,
+      color: myColors.palleteMediumBlue,
       height: MediaQuery.of(context).size.height,
       width: double.infinity,
       child: Stack(
@@ -24,35 +25,36 @@ class _ProfilePageState extends State<ProfilePage> {
               children: <Widget>[
 
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     Image(
-                      height: 150,
-                      width: 150,
-                      image: AssetImage('assets/profile_pic.png'),
+                      height: 120,
+                      width: 120,
+                      image: AssetImage('images/rocket4.png'),
                     ),
+                    SizedBox(width: 30),
                     Column(
                       children: <Widget>[
                         Text("Pontos XP: 125",
                           style: TextStyle(
-                            fontFamily: 'LuckiestGuy',
+                             fontFamily: 'BellotaText',
                               fontWeight: FontWeight.w700,
-                              fontSize: 16,
+                              fontSize: 19,
                               color: Colors.orange),
                         ),
                         SizedBox(height: 10.0),
                         Text("Próximo (250XP):",
                           style: TextStyle(
-                            fontFamily: 'LuckiestGuy',
+                             fontFamily: 'BellotaText',
                               fontWeight: FontWeight.w700,
-                              fontSize: 16,
-                              color: Colors.pink),
+                              fontSize: 19,
+                              color: Colors.redAccent[700]),
                         ),
                         SizedBox(height: 10.0),
                         Image(
-                          height: 50,
-                          width: 50,
-                          image: AssetImage('assets/next_profile.png'),
+                          height: 70,
+                          width: 70,
+                          image: AssetImage('images/rocket3.png'),
                         ),
                       ],
                     )
@@ -62,12 +64,12 @@ class _ProfilePageState extends State<ProfilePage> {
                   children: <Widget>[
                     SizedBox(width: 0.0, height: 60.0),
                     Text(
-                      "Olá, Joana Souza.",
+                      "Olá, Lucas Carvalho.",
                       style: TextStyle(
-                        fontFamily: 'LuckiestGuy',
+                         fontFamily: 'BellotaText',
                           fontWeight: FontWeight.w700,
                           fontSize: 26,
-                          color: Colors.pink),
+                          color: Colors.redAccent[700]),
                     ),
                   ],
                 ),
@@ -98,7 +100,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             Text(
                               "Histórico",
                               style: TextStyle(
-                                fontFamily: 'LuckiestGuy',
+                                 fontFamily: 'BellotaText',
                                   fontWeight: FontWeight.w900,
                                   fontSize: 24,
                                   color: Colors.black),
@@ -106,7 +108,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             Text(
                               "Ver tudo",
                               style: TextStyle(
-                                fontFamily: 'LuckiestGuy',
+                                 fontFamily: 'BellotaText',
                                   fontWeight: FontWeight.w700,
                                   fontSize: 16,
                                   color: Colors.grey[800]),
@@ -128,7 +130,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               child: Text(
                                 "Tudo",
                                 style: TextStyle(
-                                  fontFamily: 'LuckiestGuy',
+                                   fontFamily: 'BellotaText',
                                     fontWeight: FontWeight.w700,
                                     fontSize: 14,
                                     color: Colors.grey[900]),
@@ -162,7 +164,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                   Text(
                                     "Prêmios",
                                     style: TextStyle(
-                                      fontFamily: 'LuckiestGuy',
+                                       fontFamily: 'BellotaText',
                                         fontWeight: FontWeight.w700,
                                         fontSize: 14,
                                         color: Colors.grey[900]),
@@ -198,7 +200,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                   Text(
                                     "+XP",
                                     style: TextStyle(
-                                      fontFamily: 'LuckiestGuy',
+                                       fontFamily: 'BellotaText',
                                         fontWeight: FontWeight.w700,
                                         fontSize: 14,
                                         color: Colors.grey[900]),
@@ -230,7 +232,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         child: Text(
                           "Hoje",
                           style: TextStyle(
-                            fontFamily: 'LuckiestGuy',
+                             fontFamily: 'BellotaText',
                               fontSize: 15,
                               fontWeight: FontWeight.w700,
                               color: Colors.grey[500]),
@@ -275,7 +277,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                       Text(
                                         "ContaJá",
                                         style: TextStyle(
-                                          fontFamily: 'LuckiestGuy',
+                                           fontFamily: 'BellotaText',
                                             fontSize: 18,
                                             fontWeight: FontWeight.w700,
                                             color: Colors.grey[900]),
@@ -283,7 +285,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                       Text(
                                         "Resgate efetuado",
                                         style: TextStyle(
-                                          fontFamily: 'LuckiestGuy',
+                                           fontFamily: 'BellotaText',
                                             fontSize: 15,
                                             fontWeight: FontWeight.w700,
                                             color: Colors.grey[500]),
@@ -297,7 +299,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                     Text(
                                       "3 meses",
                                       style: TextStyle(
-                                        fontFamily: 'LuckiestGuy',
+                                         fontFamily: 'BellotaText',
                                           fontSize: 18,
                                           fontWeight: FontWeight.w700,
                                           color: Colors.lightGreen),
@@ -305,7 +307,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                     Text(
                                       "Grátis",
                                       style: TextStyle(
-                                        fontFamily: 'LuckiestGuy',
+                                         fontFamily: 'BellotaText',
                                           fontSize: 15,
                                           fontWeight: FontWeight.w700,
                                           color: Colors.grey[500]),
@@ -360,7 +362,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                       Text(
                                         "NaNuvem",
                                         style: TextStyle(
-                                          fontFamily: 'LuckiestGuy',
+                                           fontFamily: 'BellotaText',
                                             fontSize: 18,
                                             fontWeight: FontWeight.w700,
                                             color: Colors.grey[900]),
@@ -369,7 +371,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                         "Resgate efetuado",
                                         style: TextStyle(
                                             fontSize: 15,
-                                            fontFamily: 'LuckiestGuy',
+                                             fontFamily: 'BellotaText',
                                             fontWeight: FontWeight.w700,
                                             color: Colors.grey[500]),
                                       ),
@@ -382,7 +384,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                     Text(
                                       "1 mês",
                                       style: TextStyle(
-                                        fontFamily: 'LuckiestGuy',
+                                         fontFamily: 'BellotaText',
                                           fontSize: 18,
                                           fontWeight: FontWeight.w700,
                                           color: Colors.lightGreen),
@@ -391,7 +393,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                       "Grátis",
                                       style: TextStyle(
                                           fontSize: 15,
-                                          fontFamily: 'LuckiestGuy',
+                                           fontFamily: 'BellotaText',
                                           fontWeight: FontWeight.w700,
                                           color: Colors.grey[500]),
                                     ),
@@ -416,7 +418,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         child: Text(
                           "Ontem",
                           style: TextStyle(
-                            fontFamily: 'LuckiestGuy',
+                             fontFamily: 'BellotaText',
                               fontSize: 15,
                               fontWeight: FontWeight.w700,
                               color: Colors.grey[500]),
@@ -462,7 +464,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                         "Conclusão - Fase 1",
                                         style: TextStyle(
                                             fontSize: 18,
-                                            fontFamily: 'LuckiestGuy',
+                                             fontFamily: 'BellotaText',
                                             fontWeight: FontWeight.w700,
                                             color: Colors.grey[900]),
                                       ),
@@ -470,7 +472,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                         "Trilha Business",
                                         style: TextStyle(
                                             fontSize: 15,
-                                            fontFamily: 'LuckiestGuy',
+                                             fontFamily: 'BellotaText',
                                             fontWeight: FontWeight.w700,
                                             color: Colors.grey[500]),
                                       ),
@@ -484,7 +486,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                       "+150",
                                       style: TextStyle(
                                           fontSize: 18,
-                                          fontFamily: 'LuckiestGuy',
+                                           fontFamily: 'BellotaText',
                                           fontWeight: FontWeight.w700,
                                           color: Colors.orange),
                                     ),
@@ -492,7 +494,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                       "XP",
                                       style: TextStyle(
                                           fontSize: 15,
-                                          fontFamily: 'LuckiestGuy',
+                                           fontFamily: 'BellotaText',
                                           fontWeight: FontWeight.w700,
                                           color: Colors.grey[500]),
                                     ),

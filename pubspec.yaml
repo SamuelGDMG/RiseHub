@@ -41,6 +41,12 @@ flutter:
     - assets/sword.png
     - assets/book.png
     - images/1.jpg
+    - images/rocket1.png
+    - images/rocket2.png
+    - images/rocket.png
+    - images/rocket3.png
+    - images/rocket4.png
+
 
   fonts:
     - family: BastardusSans

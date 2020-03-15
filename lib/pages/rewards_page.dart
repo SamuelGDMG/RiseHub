@@ -34,7 +34,7 @@ class _BenefitsPage extends State<BenefitsPage> {
                     ),
                     Center(
                       child: Text(
-                        "Business Monsters",
+                        "RiseArea",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontFamily: 'BellotaText',

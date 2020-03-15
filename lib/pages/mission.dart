@@ -54,7 +54,7 @@ class _MissionState extends State<Mission> {
         ),
 //        centerTitle: true,
         gradient: LinearGradient(
-            colors: [myColors.palletePink, myColors.palleteMediumPink]),
+            colors: [myColors.palleteBlue, myColors.palleteMediumBlue]),
         actions: <Widget>[
           Padding(
               padding: EdgeInsets.only(right: 10.0),
@@ -132,7 +132,7 @@ class _MissionState extends State<Mission> {
       margin: EdgeInsets.fromLTRB(0, 15, 0, 5),
       width: 390,
       child: Card(
-        color: myColors.palletePink,
+        color: myColors.palleteBlue,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(50.0),
         ),
@@ -186,7 +186,7 @@ class _MissionState extends State<Mission> {
                   child: Text(
                     text,
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: myColors.palleteMediumPink, fontSize: 14, fontFamily: 'LuckiestGuy'),
+                    style: TextStyle(color: myColors.palleteMediumBlue, fontSize: 14, fontFamily: 'LuckiestGuy'),
                   ),
                 ),
               ),
@@ -204,7 +204,7 @@ Widget footer() {
       margin: EdgeInsets.fromLTRB(0, 15, 0, 5),
       width: 390,
       child: Card(
-        color: myColors.palletePink,
+        color: myColors.palleteBlue,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(50.0),
         ),

@@ -17,6 +17,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     List<Color> card_colors1 = [
       myColors.palleteBlue,
+      myColors.palleteLightBlue,
       myColors.block2,
       myColors.block3,
       myColors.block4,
@@ -59,7 +60,7 @@ class _MainPageState extends State<MainPage> {
 //          mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                'assets/profile_pic.png',
+                'images/rocket4.png',
                 fit: BoxFit.contain,
                 height: 42,
               ),
@@ -67,7 +68,9 @@ class _MainPageState extends State<MainPage> {
                   padding: const EdgeInsets.all(15.0),
                   child: Row(
                     children: <Widget>[
-                      Text('Joana Souza'),
+                      Text('Lucas Carvalho',
+                      style: TextStyle( fontFamily: 'BellotaText',),
+                      ),
                       SizedBox(
                         width: 5,
                       ),
@@ -76,6 +79,7 @@ class _MainPageState extends State<MainPage> {
                         child: Text(
                           "XP: 125",
                           style: TextStyle(
+                             fontFamily: 'BellotaText',
                               fontSize: 12.0, color: Colors.limeAccent),
                         ),
                       )
@@ -85,7 +89,7 @@ class _MainPageState extends State<MainPage> {
           ),
 //        centerTitle: true,
           gradient: LinearGradient(
-              colors: [myColors.palletePink, myColors.palleteMediumPink]),
+              colors: [myColors.palleteBlue, myColors.palleteMediumBlue]),
           actions: <Widget>[
             PopupMenuButton<String>(
               onSelected: choiceAction,
