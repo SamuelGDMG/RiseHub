@@ -67,11 +67,11 @@ class _Home extends State<Home> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Icon(
-                Icons.home,
+                Icons.trending_up,
                 color: Colors.white,
               ),
               Text(
-                "Material",
+                "Dados",
                 style: TextStyle(color: Colors.white, fontSize: 10, ),
               ),
             ],
@@ -84,7 +84,7 @@ class _Home extends State<Home> {
                 color: Colors.white,
               ),
               Text(
-                "Prêmios",
+                "Benefícios",
                 style: TextStyle(color: Colors.white, fontSize: 10, ),
               ),
             ],

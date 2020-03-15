@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:Business_Monsters/utils/colors.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
-import 'package:Business_Monsters/cards/menu_card.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'dart:io';
+import 'package:flip_card/flip_card.dart';
 
 MyColors myColors = MyColors();
+GlobalKey<FlipCardState> cardKey2 = GlobalKey<FlipCardState>();
 
 class MainPage extends StatefulWidget {
   @override
@@ -77,7 +78,7 @@ class _MainPageState extends State<MainPage> {
                       Padding(
                         padding: EdgeInsets.only(top: 5.0),
                         child: Text(
-                          "XP: 125",
+                          "XP: 150",
                           style: TextStyle(
                              fontFamily: 'BellotaText',
                               fontSize: 12.0, color: Colors.limeAccent),
@@ -104,30 +105,39 @@ class _MainPageState extends State<MainPage> {
             ),
           ],
         ),
-        body: AnimationLimiter(
-            child: ListView.builder(
-          itemCount: 3,
-          itemBuilder: (BuildContext context, int index) {
-            return AnimationConfiguration.staggeredList(
-              position: index,
-              duration: const Duration(milliseconds: 800),
-              child: SlideAnimation(
-                verticalOffset: 50.0,
-                child: FadeInAnimation(
-                  child: MenuCard(
-                      width: 160.0,
-                      height: 172.0,
-                      color: card_colors1[index],
-                      color2: card_colors2[index],
-                      text2: title2[index],
-                      text: title1[index],
-                      desc2: desc2[index],
-                      desc: desc[index]),
+        body: Container(
+          child: Container
+            (
+              margin: EdgeInsets.symmetric(vertical: 16.0, horizontal: 54.0),
+              child: Material
+                (
+                elevation: 8.0,
+                color: Colors.black,
+                borderRadius: BorderRadius.circular(32.0),
+                child: InkWell
+                  (
+                  onTap: () {},
+                  child: Padding
+                    (
+                    padding: EdgeInsets.all(12.0),
+                    child: Row
+                      (
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>
+                      [
+                        Icon(Icons.add, color: Colors.white),
+                        Padding(padding: EdgeInsets.only(right: 16.0)),
+                        Text('ADD A ITEM', style: TextStyle(color: Colors.white))
+                      ],
+                    ),
+                  ),
                 ),
-              ),
-            );
-          },
-        )));
+              )
+          ),
+        ),
+    );
   }
 
   void choiceAction(String choice) {
@@ -136,8 +146,8 @@ class _MainPageState extends State<MainPage> {
           context: context,
           builder: (BuildContext context) {
             return AlertDialog(
-              title: new Text("Erro"),
-              content: new Text("Deixe de frescura e use da forma que está ;)"),
+              title: new Text("Em breve"),
+              content: new Text("Aguarde as próximas atualizações ;)"),
               actions: <Widget>[
                 // usually buttons at the bottom of the dialog
                 new FlatButton(
@@ -154,10 +164,10 @@ class _MainPageState extends State<MainPage> {
           context: context,
           builder: (BuildContext context) {
             return AlertDialog(
-              title: new Text("Equipe 24"),
+              title: new Text("Equipe 10"),
               content: InkWell(
                 child: new Text(
-                    "Yves Alvim\nSamuel Santos\nAugusto Vesco\nCaio Pedroso\nGitRepo: https://github.com/gutovesco/Business-Monsters"),
+                    "Samuel Santos\nAugusto Vesco\nCaio Pedroso\n\nGitRepo: https://github.com/SamuelGDMG/RiseArea"),
               ),
               //new Text(),
               actions: <Widget>[
