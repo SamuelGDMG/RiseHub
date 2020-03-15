@@ -459,20 +459,12 @@ class _ProfilePageState extends State<ProfilePage> {
                                         CrossAxisAlignment.start,
                                     children: <Widget>[
                                       Text(
-                                        "Conclusão - Fase 1",
+                                        "Conclusão - Business Match",
                                         style: TextStyle(
                                             fontSize: 18,
                                              fontFamily: 'BellotaText',
                                             fontWeight: FontWeight.w700,
                                             color: Colors.grey[900]),
-                                      ),
-                                      Text(
-                                        "Trilha Business",
-                                        style: TextStyle(
-                                            fontSize: 15,
-                                             fontFamily: 'BellotaText',
-                                            fontWeight: FontWeight.w700,
-                                            color: Colors.grey[500]),
                                       ),
                                     ],
                                   ),
