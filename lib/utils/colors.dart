@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class MyColors{
   Color subtext = Color(0xff5E4C5A);
   Color text = Color(0xffFFEFD5);
-  Color bars = Color(0xffF9627D);
+  Color bars = Color(0xff1144e8);
   Color accent = Color(0xff2D3055);
   Color block5 = Color(0xff5B3758);
   Color block6 = Color(0xff55917F);
@@ -15,7 +15,7 @@ class MyColors{
 
 
   Color palleteLightPink = Color(0xffffc2c2);
-  Color palleteMediumPink = Color(0xffff9d9d);
-  Color palletePink = Color(0xffff2e63);
+  Color palleteMediumPink = Color(0xff829ef6);
+  Color palletePink = Color(0xff1144e8);
 
 }
