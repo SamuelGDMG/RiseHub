@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:Business_Monsters/utils/colors.dart';
-import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
-import 'package:Business_Monsters/cards/menu_card.dart';
+import 'package:RiseArea/utils/colors.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'dart:io';
+import 'package:flip_card/flip_card.dart';
 
 MyColors myColors = MyColors();
+GlobalKey<FlipCardState> cardKey2 = GlobalKey<FlipCardState>();
 
 class MainPage extends StatefulWidget {
   @override
@@ -32,25 +32,6 @@ class _MainPageState extends State<MainPage> {
       myColors.block2,
       myColors.block3,
     ];
-    List<String> title1 = [
-      "\t\t\t\t\t\tMindset Empreendedor",
-      "UX/UI",
-      "Pessoas",
-      "Finanças",
-      "Marketing",
-      "Finanças"
-    ];
-    List<String> title2 = [
-      "Business",
-      "Marketing",
-      "Tecnologia",
-      "Missão 0",
-      "UX/UI",
-      "Business"
-    ];
-
-    List<String> desc = ["0/22", "0/53", "0/42", "0/30", "0/61", "0/34"];
-    List<String> desc2 = ["0/30", "0/61", "0/34", "0/20", "0/53", "0/42"];
 
     return Scaffold(
         backgroundColor: Colors.white,
@@ -77,7 +58,7 @@ class _MainPageState extends State<MainPage> {
                       Padding(
                         padding: EdgeInsets.only(top: 5.0),
                         child: Text(
-                          "XP: 125",
+                          "XP: 150",
                           style: TextStyle(
                              fontFamily: 'BellotaText',
                               fontSize: 12.0, color: Colors.limeAccent),
@@ -104,30 +85,115 @@ class _MainPageState extends State<MainPage> {
             ),
           ],
         ),
-        body: AnimationLimiter(
-            child: ListView.builder(
-          itemCount: 3,
-          itemBuilder: (BuildContext context, int index) {
-            return AnimationConfiguration.staggeredList(
-              position: index,
-              duration: const Duration(milliseconds: 800),
-              child: SlideAnimation(
-                verticalOffset: 50.0,
-                child: FadeInAnimation(
-                  child: MenuCard(
-                      width: 160.0,
-                      height: 172.0,
-                      color: card_colors1[index],
-                      color2: card_colors2[index],
-                      text2: title2[index],
-                      text: title1[index],
-                      desc2: desc2[index],
-                      desc: desc[index]),
+        body: Container(
+          color: Colors.blue,
+          child: Column(
+            children: <Widget>[
+              SizedBox(
+                height: 20.0,
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    '\t\t\tProgramação',
+                    style: TextStyle(
+                        fontFamily: 'CaviarDreamsBold',
+                        color: Colors.black,
+                        fontSize: 26.0),
+                  ),
+                ],
+              ),
+              Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                ),
+                elevation: 2,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                child: Container(
+                  width: 300,
+                  height: 150,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.only(top: 30.0),
+                        child: Column(
+                          children: <Widget>[
+                            Text(
+                              'Coffee Break',
+                              style:
+                              TextStyle(color: Colors.white, fontSize: 30.0),
+                            ),
+                            Text(
+                              '08:00 - 08:45',
+                              style:
+                              TextStyle(color: myColors.text, fontSize: 20.0),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(right: 80.0, top: 42.0),
+                              child: Text(
+                                'Próximo: Apresentação dos Desafios',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 10.0,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            );
-          },
-        )));
+              SizedBox(height: 20.0),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    '\t\t\tMentoria',
+                    style: TextStyle(
+                        fontFamily: 'CaviarDreamsBold',
+                        color: Colors.black,
+                        fontSize: 26.0),
+                  ),
+                ],
+              ),
+              Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                  side: BorderSide(
+                    color: Colors.red,
+                    width: 1.0,
+                  ),
+                ),
+                color: Colors.lightBlue,
+                elevation: 2,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                child: Container(
+                  width: 400,
+                  height: 150,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Center(
+                        child: Text(
+                         "oi",
+                          style: TextStyle(
+                              fontStyle: FontStyle.italic,
+                              color: Colors.white,
+                              fontSize: 18.0),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+    );
   }
 
   void choiceAction(String choice) {
@@ -136,8 +202,8 @@ class _MainPageState extends State<MainPage> {
           context: context,
           builder: (BuildContext context) {
             return AlertDialog(
-              title: new Text("Erro"),
-              content: new Text("Deixe de frescura e use da forma que está ;)"),
+              title: new Text("Em breve"),
+              content: new Text("Aguarde as próximas atualizações ;)"),
               actions: <Widget>[
                 // usually buttons at the bottom of the dialog
                 new FlatButton(
@@ -154,10 +220,10 @@ class _MainPageState extends State<MainPage> {
           context: context,
           builder: (BuildContext context) {
             return AlertDialog(
-              title: new Text("Equipe 24"),
+              title: new Text("Equipe 10"),
               content: InkWell(
                 child: new Text(
-                    "Yves Alvim\nSamuel Santos\nAugusto Vesco\nCaio Pedroso\nGitRepo: https://github.com/gutovesco/Business-Monsters"),
+                    "Samuel Santos\nAugusto Vesco\nCaio Pedroso\n\nGitRepo: https://github.com/SamuelGDMG/RiseArea"),
               ),
               //new Text(),
               actions: <Widget>[

@@ -1,20 +1,18 @@
-import 'package:Business_Monsters/pages/congratulation.dart';
+import 'package:RiseArea/pages/congratulation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:slimy_card/slimy_card.dart';
-import 'package:Business_Monsters/register_pages/signup-complete.dart';
 
 Color palleteLightGrey = Color(0xffc4d1fa);
 Color palleteLightBlue = Color(0xff829ef6);
 Color palleteMediumBlue = Color(0xff3b66f1);
 Color palleteBlue = Color(0xff1144e8);
 
-class SlimyCardPage2 extends StatefulWidget {
+class RegisterAcc extends StatefulWidget {
   @override
   _SlimyCardPage2 createState() => _SlimyCardPage2();
 }
 
-class _SlimyCardPage2 extends State<SlimyCardPage2> {
+class _SlimyCardPage2 extends State<RegisterAcc> {
 
   final List<String> subjects = ["Tecnologia", "Comércio", "Finança", "Educação", "Ramo"];
   String selectedSubject = "Ramo";
@@ -165,7 +163,6 @@ class _SlimyCardPage2 extends State<SlimyCardPage2> {
                       child: Container(
                         width: double.infinity,
                         alignment: Alignment.center,
-                        height: ScreenUtil().setHeight(120),
                         margin: EdgeInsets.symmetric(vertical: 15),
                         decoration: BoxDecoration(
                             color: Color(0xFFF1F3F6),

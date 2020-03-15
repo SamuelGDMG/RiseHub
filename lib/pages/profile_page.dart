@@ -1,6 +1,4 @@
-import 'package:Business_Monsters/pages/content_page.dart';
 import 'package:flutter/material.dart';
-
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -11,7 +9,7 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: myColors.palleteMediumBlue,
+      color: Colors.blue,
       height: MediaQuery.of(context).size.height,
       width: double.infinity,
       child: Stack(
@@ -35,7 +33,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     SizedBox(width: 30),
                     Column(
                       children: <Widget>[
-                        Text("Pontos XP: 125",
+                        Text("Possuí: 150 XP",
                           style: TextStyle(
                              fontFamily: 'BellotaText',
                               fontWeight: FontWeight.w700,
@@ -43,7 +41,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               color: Colors.orange),
                         ),
                         SizedBox(height: 10.0),
-                        Text("Próximo (250XP):",
+                        Text("Meta (250 XP): ",
                           style: TextStyle(
                              fontFamily: 'BellotaText',
                               fontWeight: FontWeight.w700,
@@ -69,7 +67,7 @@ class _ProfilePageState extends State<ProfilePage> {
                          fontFamily: 'BellotaText',
                           fontWeight: FontWeight.w700,
                           fontSize: 26,
-                          color: Colors.redAccent[700]),
+                          color: Colors.white),
                     ),
                   ],
                 ),
