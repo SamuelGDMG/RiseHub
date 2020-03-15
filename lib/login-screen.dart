@@ -105,6 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                           ),
                           child: TextField(
+                            obscureText: true,
                             decoration: InputDecoration(
                                 border: InputBorder.none,
                                 hintText: "Senha",

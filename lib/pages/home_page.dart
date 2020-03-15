@@ -1,9 +1,16 @@
 import 'package:RiseArea/ResultsScreen.dart';
+import 'package:RiseArea/login-screen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:RiseArea/utils/colors.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'dart:io';
 import 'package:flip_card/flip_card.dart';
+
+Color palleteLightGrey = Color(0xffc4d1fa);
+Color palleteLightBlue = Color(0xff829ef6);
+Color palleteMediumBlue = Color(0xff3b66f1);
+Color palleteBlue = Color(0xff1144e8);
 
 MyColors myColors = MyColors();
 GlobalKey<FlipCardState> cardKey2 = GlobalKey<FlipCardState>();
@@ -98,7 +105,7 @@ class _MainPageState extends State<MainPage> {
         child: Column(
           children: <Widget>[
             SizedBox(
-              height: 20.0,
+              height: 70.0,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -118,7 +125,7 @@ class _MainPageState extends State<MainPage> {
               ),
               elevation: 2,
               margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-              color: Colors.redAccent,
+              color: palleteLightBlue,
               child: Container(
                 width: 400,
                 height: 200,
@@ -181,11 +188,11 @@ class _MainPageState extends State<MainPage> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0),
                 side: BorderSide(
-                  color: Colors.green,
+                  color: palleteBlue,
                   width: 1.0,
                 ),
               ),
-              color: Colors.green,
+              color: palleteBlue,
               elevation: 2,
               margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
               child: Container(
@@ -218,7 +225,7 @@ class _MainPageState extends State<MainPage> {
                             color: Colors.black,
                           ),
                         ),
-                        color: Colors.lightGreen,
+                        color: Colors.white,
                       ),
                     ),
                   ],

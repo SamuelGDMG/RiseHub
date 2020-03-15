@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:RiseArea/home.dart';
 
-Color palleteBlue = Color(0xff010a43);
-Color palleteLightPink = Color(0xffffc2c2);
-Color palleteMediumPink = Color(0xffff9d9d);
-Color palletePink = Color(0xffff2e63);
+Color palleteLightGrey = Color(0xffc4d1fa);
+Color palleteLightBlue = Color(0xff829ef6);
+Color palleteMediumBlue = Color(0xff3b66f1);
+Color palleteBlue = Color(0xff1144e8);
+
 
 class Congratulations extends StatefulWidget {
   Congratulations({Key key}) : super(key: key);
@@ -61,8 +62,8 @@ class _CongratulationsState extends State<Congratulations> {
                                     child: Text('PARABÉNS!',
                                       textAlign: TextAlign.left,
                                       style: TextStyle(
-                                          color: Colors.pink,
-                                          fontFamily: 'LuckiestGuy',
+                                          color: palleteMediumBlue,
+                                          fontFamily: 'BellotaText',
                                           fontSize: 40
                                       ),
                                     ),
@@ -83,13 +84,13 @@ class _CongratulationsState extends State<Congratulations> {
                                     children: <Widget>[
                                       Container(
                                         constraints: BoxConstraints.expand(
-                              height: 300.0,
+                              height: 250.0,
                             ),
                                         decoration: BoxDecoration(
                                 image: new DecorationImage(
                                   alignment: Alignment.centerLeft,
                               image: new ExactAssetImage(
-                                'assets/profile_pic.png',
+                                'images/rocket3.png',
                                 scale: 1.5
                               ),
                                       )
@@ -112,12 +113,12 @@ class _CongratulationsState extends State<Congratulations> {
                           ),
 
                           Text(
-                              'Você acaba de completar sua primeira missão!\nSeu conteúdo de aprendizado foi adaptado para atender seu perfil atual.',
+                              'Agora você está pronto para começar a construir seu foguete!\nRealize o teste e atualize dados para ganhar XP e adquirir benefícios.',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontSize: 20,
-                                color: palleteMediumPink,
-                                fontFamily: 'LuckiestGuy',
+                                color: palleteMediumBlue,
+                                fontFamily: 'BellotaText',
                               )),
 
                           SizedBox(height: 20),
@@ -137,13 +138,13 @@ class _CongratulationsState extends State<Congratulations> {
                             color: Color(0xFFF1F3F6),
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                               gradient: LinearGradient(
-                           colors: [palletePink, palleteMediumPink]),
+                           colors: [palleteLightBlue, palleteBlue]),
                             ),
                         child: Text(
                           "IR PARA CONTEÚDO",
                           style: TextStyle(
                               color: Colors.white,
-                              fontSize: 16, fontFamily: 'LuckiestGuy',),
+                              fontSize: 16, fontFamily: 'BellotaText',),
                         ),
                       ),
                     ),

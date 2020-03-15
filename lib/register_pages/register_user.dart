@@ -49,7 +49,7 @@ class _SlimyCardPage2 extends State<RegisterAcc> {
           Container(
               child: Text(data,
                   style: TextStyle(
-                    fontFamily: 'LuckiestGuy',
+                    fontFamily: 'BellotaText',
                     letterSpacing: 1,
                       color: Colors.white,
                       fontSize: 20,
@@ -78,14 +78,31 @@ class _SlimyCardPage2 extends State<RegisterAcc> {
                           ),
                           labelText: "Usuário",
                           labelStyle: TextStyle(
-                            fontFamily: 'LuckiestGuy',
+                            fontFamily: 'BellotaText',
                               color: Colors.white,
                               fontSize: 16,
                     ),
                   ),
                 ),
+
                 TextField(
-                      style: TextStyle(color: Colors.white, fontFamily: 'LuckiestGuy',),
+                      style: TextStyle(color: Colors.white, fontFamily: 'BellotaText',),
+                      decoration: InputDecoration(
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                                color: Colors.white,
+                                width: 2),
+                          ),
+                          labelText: "CNPJ",
+                          labelStyle: TextStyle(
+                            fontFamily: 'BellotaText',
+                              color: Colors.white,
+                              fontSize: 16,
+                    ),
+                  )
+                ),
+                TextField(
+                      style: TextStyle(color: Colors.white, fontFamily: 'BellotaText',),
                       decoration: InputDecoration(
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
@@ -94,13 +111,14 @@ class _SlimyCardPage2 extends State<RegisterAcc> {
                           ),
                           labelText: "E-mail",
                           labelStyle: TextStyle(
-                            fontFamily: 'LuckiestGuy',
+                            fontFamily: 'BellotaText',
                               color: Colors.white,
                               fontSize: 16,
                     ),
                   )
                 ),
                     TextField(
+                      obscureText: true,
                       style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                           focusedBorder: UnderlineInputBorder(
@@ -110,14 +128,15 @@ class _SlimyCardPage2 extends State<RegisterAcc> {
                           ),
                           labelText: "Senha",
                           labelStyle: TextStyle(
-                            fontFamily: 'LuckiestGuy',
+                            fontFamily: 'BellotaText',
                               color: Colors.white,
                               fontSize: 16,
                     ),
                   )
                 ),
                 TextField(
-                      style: TextStyle(color: Colors.white, fontFamily: 'LuckiestGuy',),
+                  obscureText: true,
+                      style: TextStyle(color: Colors.white, fontFamily: 'BellotaText',),
                       decoration: InputDecoration(
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
@@ -126,33 +145,14 @@ class _SlimyCardPage2 extends State<RegisterAcc> {
                           ),
                           labelText: "Confirmar Senha",
                           labelStyle: TextStyle(
-                            fontFamily: 'LuckiestGuy',
+                            fontFamily: 'BellotaText',
                               color: Colors.white,
                               fontSize: 16,
                     ),
                   )
                 ),
-                SizedBox(height: 10),
-        DropdownButton<String>(
-          focusColor: palleteMediumBlue,
-        iconSize: 24,
-        elevation: 6,
-        style: TextStyle(color: palleteLightBlue, fontFamily: 'LuckiestGuy',),
-        value: selectedSubject,
-        onChanged: (value) {
-          setState(() {
-            selectedSubject = value;
-          });
-        },
-        items: subjects.map<DropdownMenuItem<String>>((value) {
-          return DropdownMenuItem(
-            child: Text(value),
-            value: value,
-          );
-        }).toList(),
-      ),
                 
-                 SizedBox(height: 20),
+                 SizedBox(height: 10),
       GestureDetector(
                      onTap: () {
                         Navigator.push(
@@ -161,9 +161,10 @@ class _SlimyCardPage2 extends State<RegisterAcc> {
                                 builder: (BuildContext context) => Congratulations()));
                       },
                       child: Container(
+                        height: 50,
                         width: double.infinity,
                         alignment: Alignment.center,
-                        margin: EdgeInsets.symmetric(vertical: 15),
+                        margin: EdgeInsets.symmetric(vertical: 5),
                         decoration: BoxDecoration(
                             color: Color(0xFFF1F3F6),
                             borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -180,7 +181,7 @@ class _SlimyCardPage2 extends State<RegisterAcc> {
                         child: Text(
                           "Submeter",
                           style: TextStyle(
-                            fontFamily: 'LuckiestGuy',
+                            fontFamily: 'BellotaText',
                               color: palleteMediumBlue,
                               fontSize: 16),
                         ),
