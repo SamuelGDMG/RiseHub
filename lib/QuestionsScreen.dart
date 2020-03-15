@@ -6,6 +6,11 @@ var estado = TextEditingController();
 var setor = TextEditingController();
 var funcs = TextEditingController();
 
+var publico = TextEditingController();
+var receita = TextEditingController();
+var localizacao = TextEditingController();
+var nome = TextEditingController();
+
 class QuestionsScreen extends StatefulWidget {
   @override
   _QuestionsScreenState createState() => _QuestionsScreenState();
@@ -49,7 +54,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                       BoxShadow(color: Colors.black12, blurRadius: 5)
                     ]),
                 child: TextField(
-                  controller: estado,
+                  controller: nome,
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     icon: Icon(
@@ -188,7 +193,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                       BoxShadow(color: Colors.black12, blurRadius: 5)
                     ]),
                 child: TextField(
-                  controller: estado,
+                  controller: publico,
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     icon: Icon(
@@ -215,7 +220,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                       BoxShadow(color: Colors.black12, blurRadius: 5)
                     ]),
                 child: TextField(
-                  controller: estado,
+                  controller: receita,
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     icon: Icon(
@@ -242,7 +247,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                       BoxShadow(color: Colors.black12, blurRadius: 5)
                     ]),
                 child: TextField(
-                  controller: estado,
+                  controller: localizacao,
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     icon: Icon(
